@@ -1,0 +1,30 @@
+//
+//  AdapterPatternTest.pch
+//  AdapterPatternTest
+//
+//  Created by kunge on 2018/7/2.
+//  Copyright © 2018年 kunge. All rights reserved.
+//
+
+#ifndef AdapterPatternTest_pch
+#define AdapterPatternTest_pch
+
+#import <MJRefresh.h>
+#import <AFNetworking.h>
+#import <MJExtension.h>
+#import <MBProgressHUD.h>
+#import "MBProgressHUD+Pzs.h"
+
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+/*------------屏幕尺寸-----------*/
+#define ZJScreenHeight      [[UIScreen mainScreen] bounds].size.height
+#define ZJScreenWidth       [[UIScreen mainScreen] bounds].size.width
+// View 圆角和加边框
+#define ViewBorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+#endif /* AdapterPatternTest_pch */
